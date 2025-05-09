@@ -16,7 +16,7 @@ jobs:
 
       - name: Convert Markdown to HTML
         run: |
-          pandoc basics.md -s -o docs/basics.html --mathjax
+          pandoc basics.md -s -o index.html --mathjax=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
       - name: Commit HTML
         run: |
