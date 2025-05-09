@@ -36,7 +36,7 @@ jobs:
            # Остальные страницы
           pandoc circular.md -s -o output/circular.html \
             --mathjax=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js \
-            --metadata title="Функции"
+            --metadata title="Дуговая алгебра"
 
       - name: Upload static files as artifact
         id: deployment
