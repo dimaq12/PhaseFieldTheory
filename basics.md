@@ -25,7 +25,7 @@
 
 <div style="background:#f9f9f9; padding: 0.5em; border-left: 3px solid #ccc;">
 $$
-\pi = \frac{\text{длина окружности}}{2r}
+\pi = \frac{L}{2r}, \quad \text{где } L \text{ — длина окружности}
 $$
 </div>
 
