@@ -38,6 +38,11 @@ jobs:
             --mathjax=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js \
             --metadata title="Дуговая алгебра"
 
+            # Остальные страницы
+          pandoc calculus.md -s -o output/calculus.html \
+            --mathjax=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js \
+            --metadata title="Основы Кругового Математического Анализа"            
+
       - name: Upload static files as artifact
         id: deployment
         uses: actions/upload-pages-artifact@v3
