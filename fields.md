@@ -1,3 +1,4 @@
+
 # Круговая теория поля (версия 2.6)
 
 > **Фундаментальная модель фазово-масштабного поля на логарифмическом цилиндре**
@@ -7,7 +8,7 @@
 ## I. Геометрия пространства
 
 Пространство:  
-$\mathcal{M} = \mathbb{R}_t \times \mathbb{R}_\rho \times S^1_\alpha$
+**$\mathcal{M} = \mathbb{R}_t \times \mathbb{R}_\rho \times S^1_\alpha$**
 
 Метрика:
 <div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
@@ -27,18 +28,18 @@ $$
 
 ## II. Поля и операторы
 
-### Основные переменные:
-- $\phi(\rho, \alpha, t)$ — скалярное поле  
-- $\mathbf{A} = A_\rho d\rho + A_\alpha d\alpha$ — векторный потенциал (1-форма)
+**Основные переменные:**
+- **$\phi(\rho, \alpha, t)$** — скалярное поле  
+- **$\mathbf{A} = A_\rho d\rho + A_\alpha d\alpha$** — векторный потенциал (1-форма)
 
-### Дифференциальные операторы:
+**Дифференциальные операторы:**
 
 | Оператор                | Формула |
 |-------------------------|---------|
-| Градиент $\nabla \phi$         | $\frac{1}{e^\rho}(\partial_\rho \phi, \partial_\alpha \phi)$ |
+| Градиент $\nabla \phi$         | $\frac{1}{e^\rho}(\partial_\rho \phi, \frac{1}{e^\rho}\partial_\alpha \phi)$ |
 | Дивергенция $\nabla \cdot \vec{F}$ | $\frac{1}{e^{2\rho}}(\partial_\rho F_\rho + \partial_\alpha F_\alpha)$ |
 | Ротор $\nabla \times \vec{F}$     | $\frac{1}{e^{2\rho}}(\partial_\rho F_\alpha - \partial_\alpha F_\rho)$ |
-| Лапласиан $\nabla^2 \phi$        | $\frac{1}{e^{2\rho}}(\partial^2_\rho \phi + \partial^2_\alpha \phi)$ |
+| Лапласиан $\nabla^2 \phi$        | $\frac{1}{e^{2\rho}}\left[ \partial_\rho(e^{2\rho} \partial_\rho \phi) + \partial^2_\alpha \phi \right]$ |
 | Волновой оператор $\Box \phi$     | $\partial_t^2 \phi - \nabla^2 \phi$ |
 
 ---
@@ -48,7 +49,7 @@ $$
 Скалярное поле:
 <div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
 $$
-\mathcal{L}_\phi = \frac{1}{2}(\partial_t \phi)^2 - \frac{1}{2e^{2\rho}}((\partial_\rho \phi)^2 + (\partial_\alpha \phi)^2)
+\mathcal{L}_\phi = \frac{1}{2}(\partial_t \phi)^2 - \frac{1}{2e^{2\rho}}\left[(\partial_\rho \phi)^2 + (\partial_\alpha \phi)^2 \right]
 $$
 </div>
 
@@ -92,7 +93,7 @@ $$
 \nabla \times \vec{E} = -\partial_t \vec{B}
 $$
 </div>
-✅ Подтверждено численно в лог-пространстве.
+✅ Подтверждено численно в лог-пространстве для волнового случая.
 
 ---
 
@@ -101,7 +102,7 @@ $$
 Плотность энергии:
 <div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
 $$
-\mathcal{U} = \frac{1}{2}(\partial_t \mathcal{A})^2 + \frac{1}{2e^{2\rho}}((\partial_\rho \mathcal{A})^2 + (\partial_\alpha \mathcal{A})^2)
+\mathcal{U} = \frac{1}{2}(\partial_t \mathcal{A})^2 + \frac{1}{2e^{2\rho}}\left[(\partial_\rho \mathcal{A})^2 + (\partial_\alpha \mathcal{A})^2\right]
 $$
 </div>
 
@@ -128,12 +129,12 @@ $$
 
 ## VII. Выводы и наблюдения
 
-- Потенциал $A$ способен формировать замкнутые кольцевые магнитные поля $B$ без токов.
-- Проекция $B(x,y)$ из лог-пространства совпадает с измеримыми экспериментальными структурами.
+- Потенциал $A$ способен формировать замкнутые кольцевые магнитные поля $B$, но **только в динамике** ($\partial_t A \ne 0$).
+- В статике ($\partial_t A = 0$), $\nabla \times \vec{B} = \mu_0 \vec{J}$ требует наличия тока — проверено аналитически.
 - Уравнение $\nabla \times \vec{E} = -\partial_t \vec{B}$ выполнено (численно подтверждено).
 - Поле $\vec{E}$ вихревое и замкнутое по фазе, с масштабной локализацией.
 - Энергия фокусируется в радиальном окне — эффект масштабной резонансной моды.
-- Вся динамика построена без точечных источников, на геометрии потенциала.
+- Вся динамика построена без точечных источников, **в динамическом режиме**.
 
 ---
 
@@ -144,4 +145,3 @@ $$
 - Провести квантование в лог-пространстве
 - Спроектировать эксперимент: тороид с фазовой модуляцией и измерение $B$ на заданном $\rho_0$
 - Проверить $\nabla \cdot \vec{B} = 0$ и поведение эффективной плотности
-
