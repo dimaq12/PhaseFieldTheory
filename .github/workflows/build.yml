@@ -46,7 +46,13 @@ jobs:
             # Остальные страницы
           pandoc fields.md -s -o output/fields.html \
             --mathjax=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js \
-            --metadata title="Круговая теория поля"   
+            --metadata title="Круговая теория поля"
+
+            # Остальные страницы
+          pandoc emfields.md -s -o output/emfields.html \
+            --mathjax=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js \
+            --metadata title="Магнитное и электрическое поле в круговой теории"
+            
 
       - name: Upload static files as artifact
         id: deployment
