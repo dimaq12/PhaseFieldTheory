@@ -1,211 +1,135 @@
-# Круговая теория поля (версия 2.6‑rev, 12 мая 2025)
+# Круговая теория поля (версия 2.6‑rev, 12 мая 2025)
 
 > **Фундаментальная модель фазово‑масштабного поля на логарифмическом цилиндре**  
-> *Исправлено согласно итогам экспертного аудита (май 2025).*  
+> *Исправлено согласно итогам экспертного аудита (май 2025).*
 
 ---
 
 ## I. Геометрия пространства
 
 **Пространство**  
-$\mathcal M = \mathbb R_t 	imes \mathbb R_
-ho 	imes S^1_lpha$
+$\mathcal{M} = \mathbb{R}_t \times \mathbb{R}_\rho \times S^1_\alpha$
 
-**Метрика**  
-<div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
+**Метрика**
 $$
- ds^2 = -dt^2 + e^{2
-ho}\,(d
-ho^2 + dlpha^2)
+ds^2 = -dt^2 + e^{2\rho}(d\rho^2 + d\alpha^2)
 $$
-</div>
 
-Обратная метрика: $g^{
-ho
-ho}=g^{lphalpha}=e^{-2
-ho}$
+Обратная метрика: $g^{\rho\rho} = g^{\alpha\alpha} = e^{-2\rho}$
 
-**Объёмная форма (пространственная)**  
-<div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
+**Объёмная форма**
 $$
- \star 1 = e^{2
-ho}\,d
-ho\wedge dlpha
+\star 1 = e^{2\rho} \, d\rho \wedge d\alpha
 $$
-</div>
 
 ---
 
 ## II. Поля и операторы
 
 ### Основные переменные
-- $\phi(
-ho,lpha,t)$ — скалярное поле  
-- $\mathbf A=A_
-ho\,d
-ho+A_lpha\,dlpha$ — векторный потенциал (1‑форма)
+- $\phi(\rho, \alpha, t)$ — скалярное поле  
+- $\mathbf{A} = A_\rho\, d\rho + A_\alpha\, d\alpha$ — векторный потенциал (1-форма)
 
-### Дифференциальные операторы в $(
-ho,lpha)$‑плоскости
+### Дифференциальные операторы
 
-| Оператор | Формула |
-|----------|---------|
-| Градиент \(
-abla\phi\) | \(e^{-2
-ho}(\partial_
-ho\phi,\;\partial_lpha\phi)\) |
-| Дивергенция \(
-abla\!\cdot\!ec F\) | \(e^{-2
-ho}igl[\partial_
-ho(e^{2
-ho}F_
-ho)+\partial_lpha(e^{2
-ho}F_lpha)igr]\) |
-| Ротор \(
-abla	imesec F\) | \(e^{-2
-ho}(\partial_
-ho F_lpha - \partial_lpha F_
-ho)\) |
-| Лапласиан \(
-abla^2\phi\) | \(e^{-2
-ho}igl[\partial_
-ho(e^{2
-ho}\partial_
-ho\phi) + \partial_lpha(e^{2
-ho}\partial_lpha\phi)igr]\) |
-| Волновой оператор $\Box\phi$ | $\partial_t^2\phi-
-abla^2\phi$ |
+| Оператор                        | Формула                                                                 |
+|---------------------------------|-------------------------------------------------------------------------|
+| Градиент $\nabla\phi$           | $e^{-2\rho}(\partial_\rho \phi,\; \partial_\alpha \phi)$               |
+| Дивергенция $\nabla \cdot \vec{F}$ | $e^{-2\rho}[\partial_\rho(e^{2\rho} F_\rho) + \partial_\alpha(e^{2\rho} F_\alpha)]$ |
+| Ротор $\nabla \times \vec{F}$   | $e^{-2\rho}(\partial_\rho F_\alpha - \partial_\alpha F_\rho)$         |
+| Лапласиан $\nabla^2 \phi$       | $e^{-2\rho}[\partial_\rho(e^{2\rho} \partial_\rho \phi) + \partial_\alpha(e^{2\rho} \partial_\alpha \phi)]$ |
+| Волновой оператор $\Box \phi$   | $\partial_t^2 \phi - \nabla^2 \phi$                                    |
 
 ---
 
 ## III. Лагранжиан и уравнения движения
 
-### Скалярное поле
-<div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
+**Скалярное поле**
 $$
- \mathcal L_\phi = 	frac12(\partial_t\phi)^2 - 	frac12 e^{-2
-ho}igl[(\partial_
-ho\phi)^2 + (\partial_lpha\phi)^2igr].
+\mathcal{L}_\phi = \tfrac{1}{2}(\partial_t \phi)^2 - \tfrac{1}{2} e^{-2\rho}\left[(\partial_\rho \phi)^2 + (\partial_\alpha \phi)^2\right]
 $$
-</div>
 
-### Векторный потенциал
-<div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
+**Векторный потенциал**
 $$
- \mathcal L_A = -	frac14 F \wedge \star F, \qquad F = dA.
+\mathcal{L}_A = -\tfrac{1}{4} F \wedge \star F, \quad F = dA
 $$
-</div>
 
-### Уравнения Эйлера–Лагранжа
-<div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
+**Уравнения Эйлера–Лагранжа**
 $$
- \Box \phi = 0, \qquad d\star dA = \mu_0\, J.
+\Box \phi = 0, \quad d\star dA = \mu_0 J
 $$
-</div>
 
-Для $J=0$ возможно лишь **динамическое** решение, удовлетворяющее уравнению Ампера–Максвелла
-<div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
+Допустимо безтоковое решение ($J = 0$) только при наличии временной зависимости:
 $$
- 
-abla 	imes \mathbf B - \mu_0arepsilon_0\, \partial_t \mathbf E = 0.
+\nabla \times \vec{B} = \mu_0 \varepsilon_0 \, \partial_t \vec{E}
 $$
-</div>
 
 ---
 
 ## IV. Электрическое и магнитное поля
 
-Из потенциала $A$ определим  
+**Магнитное поле**
+$$
+B(\rho, \alpha, t) = e^{-2\rho}(\partial_\rho A_\alpha - \partial_\alpha A_\rho)
+$$
 
-<div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
+**Электрическое поле**
 $$
- B(
-ho,lpha,t) = e^{-2
-ho}igl(\partial_
-ho A_lpha - \partial_lpha A_
-hoigr),
+E_\rho = -\partial_t A_\rho, \quad E_\alpha = -\partial_t A_\alpha
 $$
-</div>
 
-<div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
+Закон Фарадея:
 $$
- E_
-ho = -\partial_t A_
-ho, \qquad E_lpha = -\partial_t A_lpha.
+\nabla \times \vec{E} = -\partial_t B
 $$
-</div>
-
-Они тождественно удовлетворяют закону Фарадея
-<div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
-$$
- 
-abla 	imes \mathbf E = -\partial_t B.
-$$
-</div>
 
 ---
 
 ## V. Энергия
 
-Плотность энергии  
-<div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
+Плотность энергии
 $$
- \mathcal U = 	frac12igl(E^2 + B^2igr),\qquad E^2 = g^{ij}E_iE_j = e^{-2
-ho}(E_
-ho^2 + E_lpha^2).
+\mathcal{U} = \tfrac{1}{2}(E^2 + B^2), \quad E^2 = e^{-2\rho}(E_\rho^2 + E_\alpha^2)
 $$
-</div>
 
-Полная энергия в кольцевом сечении
-<div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
+Интеграл полной энергии
 $$
- \mathcal E = \int_{0}^{2\pi}\! dlpha \int_{-\infty}^{\infty}\! d
-ho\, e^{2
-ho}\, \mathcal U.
+\mathcal{E} = \int_0^{2\pi} d\alpha \int_{-\infty}^{\infty} d\rho\, e^{2\rho} \mathcal{U}
 $$
-</div>
 
 ---
 
 ## VI. Топология и калибровка
 
-Калибровка: $A \mapsto A + d\chi$.
+Калибровка: $A \mapsto A + d\chi$
 
-Топологический заряд  
-<div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
+Топологический заряд:
 $$
- Q = rac{1}{2\pi} \int_{0}^{2\pi} \partial_lpha rg(\phi)\, dlpha \in \mathbb Z.
+Q = \frac{1}{2\pi} \int_0^{2\pi} \partial_\alpha \arg(\phi)\, d\alpha \in \mathbb{Z}
 $$
-</div>
 
 ---
 
 ## VII. Обсуждения
 
-* Статическое кольцевое поле $B(
-ho)$ **невозможно без тока**: при $A=A(
-ho,lpha)$ возникает ток $ec J = rac{1}{\mu_0} 
-abla 	imes ec B$. Согласованное решение без $J$ требует временной зависимости $A(
-ho,lpha,t)$.  
-* Скалярные и векторные моды локализуются по $
-ho$ благодаря экспоненциальному фактору метрики, что формирует «радиальные резонансы».  
-* При численном решении с корректными операторами выполняются тесты сохранения заряда $\partial_t 
-ho + 
-abla \cdot \mathbf J = 0$.
+- Статическое кольцевое поле $B(\rho)$ **невозможно без тока**: при $A = A(\rho, \alpha)$ возникает ток
+$$
+\vec{J} = \frac{1}{\mu_0} \nabla \times \vec{B}
+$$
+- Согласованное решение без $J$ требует временной зависимости $A(\rho, \alpha, t)$
+- Радиальная аподизация создаёт локализованные моды по $\rho$
+- Законы сохранения (включая ток) подтверждаются при использовании правильных операторов
 
 ---
 
 ## VIII. Следующие шаги
 
-1. Реализовать непрерывность тока и проанализировать распределение $\mathbf J$ для стоячих мод.  
-2. Добавить нелинейность (например $\phi^4$) и исследовать солитоноподобные решения.  
-3. Выполнить каноническое квантование в лог‑координатах.  
-4. Спроектировать эксперимент: тороид с фазовой модуляцией $A(t)$; измерить $B(
-ho_0)$ и ток $\mathbf J(
-ho_0)$.  
-5. Проверить численно условие $
-abla \cdot \mathbf B = 0$ во всём объёме.  
+1. Реализовать непрерывность тока $\partial_t \rho + \nabla \cdot \vec{J} = 0$  
+2. Добавить нелинейность (например $\phi^4$)  
+3. Выполнить квантование в лог-пространстве  
+4. Спроектировать эксперимент с фазовой модуляцией $A(t)$ и измерением $B(\rho_0)$  
+5. Проверить $\nabla \cdot \vec{B} = 0$ численно
 
 ---
 
-*Документ отражает исправления, соответствующие римановой геометрии и уравнениям Максвелла. Утверждение о безтоковом $B$ удалено как ошибочное.*
+*Документ исправлен согласно римановой геометрии и уравнениям Максвелла. Утверждение о безтоковом $B$ удалено как физически некорректное.*
