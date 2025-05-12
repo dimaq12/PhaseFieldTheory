@@ -8,21 +8,29 @@
 ## I. Геометрия пространства
 
 **Пространство**  
-$\mathcal M = \mathbb R_t \times \mathbb R_\rho \times S^1_\alpha$
+$\mathcal M = \mathbb R_t 	imes \mathbb R_
+ho 	imes S^1_lpha$
 
 **Метрика**  
 <div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
 $$
- ds^2 = -dt^2 + e^{2\rho}\,(d\rho^2 + d\alpha^2)
+ ds^2 = -dt^2 + e^{2
+ho}\,(d
+ho^2 + dlpha^2)
 $$
 </div>
 
-Обратная метрика: $g^{\rho\rho}=g^{\alpha\alpha}=e^{-2\rho}$
+Обратная метрика: $g^{
+ho
+ho}=g^{lphalpha}=e^{-2
+ho}$
 
 **Объёмная форма (пространственная)**  
 <div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
 $$
- \star 1 = e^{2\rho}\,d\rho\wedge d\alpha
+ \star 1 = e^{2
+ho}\,d
+ho\wedge dlpha
 $$
 </div>
 
@@ -31,18 +39,42 @@ $$
 ## II. Поля и операторы
 
 ### Основные переменные
-- $\phi(\rho,\alpha,t)$ — скалярное поле  
-- $\mathbf A=A_\rho\,d\rho+A_\alpha\,d\alpha$ — векторный потенциал (1‑форма)
+- $\phi(
+ho,lpha,t)$ — скалярное поле  
+- $\mathbf A=A_
+ho\,d
+ho+A_lpha\,dlpha$ — векторный потенциал (1‑форма)
 
-### Дифференциальные операторы в $(\rho,\alpha)$‑плоскости
+### Дифференциальные операторы в $(
+ho,lpha)$‑плоскости
 
 | Оператор | Формула |
 |----------|---------|
-| Градиент $\nabla\phi$ | $e^{-2\rho}\bigl(\partial_\rho\phi,\;\partial_\alpha\phi\bigr)$ |
-| Дивергенция $\nabla\!\cdot\!\mathbf F$ | $e^{-2\rho}\!\bigl[\partial_\rho\!\bigl(e^{2\rho}F_\rho\bigr)+\partial_\alpha\!\bigl(e^{2\rho}F_\alpha\bigr)\bigr]$ |
-| Ротор $\nabla\times\mathbf F$ (скаляр) | $e^{-2\rho}\bigl(\partial_\rho F_\alpha-\partial_\alpha F_\rho\bigr)$ |
-| Лапласиан $\nabla^2\phi$ | $e^{-2\rho}\!\bigl[\partial_\rho\!\bigl(e^{2\rho}\partial_\rho\phi\bigr)+\partial_\alpha\!\bigl(e^{2\rho}\partial_\alpha\phi\bigr)\bigr]$ |
-| Волновой оператор $\Box\phi$ | $\partial_t^2\phi-\nabla^2\phi$ |
+| Градиент \(
+abla\phi\) | \(e^{-2
+ho}(\partial_
+ho\phi,\;\partial_lpha\phi)\) |
+| Дивергенция \(
+abla\!\cdot\!ec F\) | \(e^{-2
+ho}igl[\partial_
+ho(e^{2
+ho}F_
+ho)+\partial_lpha(e^{2
+ho}F_lpha)igr]\) |
+| Ротор \(
+abla	imesec F\) | \(e^{-2
+ho}(\partial_
+ho F_lpha - \partial_lpha F_
+ho)\) |
+| Лапласиан \(
+abla^2\phi\) | \(e^{-2
+ho}igl[\partial_
+ho(e^{2
+ho}\partial_
+ho\phi) + \partial_lpha(e^{2
+ho}\partial_lpha\phi)igr]\) |
+| Волновой оператор $\Box\phi$ | $\partial_t^2\phi-
+abla^2\phi$ |
 
 ---
 
@@ -51,14 +83,16 @@ $$
 ### Скалярное поле
 <div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
 $$
- \mathcal L_\phi = \tfrac12(\partial_t\phi)^2 - \tfrac12 e^{-2\rho}\bigl[(\partial_\rho\phi)^2 + (\partial_\alpha\phi)^2\bigr].
+ \mathcal L_\phi = 	frac12(\partial_t\phi)^2 - 	frac12 e^{-2
+ho}igl[(\partial_
+ho\phi)^2 + (\partial_lpha\phi)^2igr].
 $$
 </div>
 
 ### Векторный потенциал
 <div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
 $$
- \mathcal L_A = -\tfrac14 F \wedge \star F, \qquad F = dA.
+ \mathcal L_A = -	frac14 F \wedge \star F, \qquad F = dA.
 $$
 </div>
 
@@ -72,7 +106,8 @@ $$
 Для $J=0$ возможно лишь **динамическое** решение, удовлетворяющее уравнению Ампера–Максвелла
 <div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
 $$
- \nabla \times \mathbf B - \mu_0\varepsilon_0\, \partial_t \mathbf E = 0.
+ 
+abla 	imes \mathbf B - \mu_0arepsilon_0\, \partial_t \mathbf E = 0.
 $$
 </div>
 
@@ -84,20 +119,27 @@ $$
 
 <div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
 $$
- B(\rho,\alpha,t) = e^{-2\rho}\bigl(\partial_\rho A_\alpha - \partial_\alpha A_\rho\bigr),
+ B(
+ho,lpha,t) = e^{-2
+ho}igl(\partial_
+ho A_lpha - \partial_lpha A_
+hoigr),
 $$
 </div>
 
 <div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
 $$
- E_\rho = -\partial_t A_\rho, \qquad E_\alpha = -\partial_t A_\alpha.
+ E_
+ho = -\partial_t A_
+ho, \qquad E_lpha = -\partial_t A_lpha.
 $$
 </div>
 
 Они тождественно удовлетворяют закону Фарадея
 <div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
 $$
- \nabla \times \mathbf E = -\partial_t B.
+ 
+abla 	imes \mathbf E = -\partial_t B.
 $$
 </div>
 
@@ -108,14 +150,18 @@ $$
 Плотность энергии  
 <div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
 $$
- \mathcal U = \tfrac12\bigl(E^2 + B^2\bigr),\qquad E^2 = g^{ij}E_iE_j = e^{-2\rho}(E_\rho^2 + E_\alpha^2).
+ \mathcal U = 	frac12igl(E^2 + B^2igr),\qquad E^2 = g^{ij}E_iE_j = e^{-2
+ho}(E_
+ho^2 + E_lpha^2).
 $$
 </div>
 
 Полная энергия в кольцевом сечении
 <div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
 $$
- \mathcal E = \int_{0}^{2\pi}\! d\alpha \int_{-\infty}^{\infty}\! d\rho\, e^{2\rho}\, \mathcal U.
+ \mathcal E = \int_{0}^{2\pi}\! dlpha \int_{-\infty}^{\infty}\! d
+ho\, e^{2
+ho}\, \mathcal U.
 $$
 </div>
 
@@ -128,7 +174,7 @@ $$
 Топологический заряд  
 <div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
 $$
- Q = \frac{1}{2\pi} \int_{0}^{2\pi} \partial_\alpha \arg(\phi)\, d\alpha \in \mathbb Z.
+ Q = rac{1}{2\pi} \int_{0}^{2\pi} \partial_lpha rg(\phi)\, dlpha \in \mathbb Z.
 $$
 </div>
 
@@ -136,9 +182,16 @@ $$
 
 ## VII. Обсуждения
 
-* Статическое кольцевое поле $B(\rho)$ **обязательно** требует ток $\mathbf J \neq 0$; безтоковые конфигурации возможны лишь динамически, когда вклад $-\mu_0\varepsilon_0\, \partial_t \mathbf E$ компенсирует ротор $\nabla \times \mathbf B$.  
-* Скалярные и векторные моды локализуются по $\rho$ благодаря экспоненциальному фактору метрики, что формирует «радиальные резонансы».  
-* При численном решении с корректными операторами выполняются тесты сохранения заряда $\partial_t \rho + \nabla \cdot \mathbf J = 0$.
+* Статическое кольцевое поле $B(
+ho)$ **невозможно без тока**: при $A=A(
+ho,lpha)$ возникает ток $ec J = rac{1}{\mu_0} 
+abla 	imes ec B$. Согласованное решение без $J$ требует временной зависимости $A(
+ho,lpha,t)$.  
+* Скалярные и векторные моды локализуются по $
+ho$ благодаря экспоненциальному фактору метрики, что формирует «радиальные резонансы».  
+* При численном решении с корректными операторами выполняются тесты сохранения заряда $\partial_t 
+ho + 
+abla \cdot \mathbf J = 0$.
 
 ---
 
@@ -147,9 +200,12 @@ $$
 1. Реализовать непрерывность тока и проанализировать распределение $\mathbf J$ для стоячих мод.  
 2. Добавить нелинейность (например $\phi^4$) и исследовать солитоноподобные решения.  
 3. Выполнить каноническое квантование в лог‑координатах.  
-4. Спроектировать эксперимент: тороид с фазовой модуляцией $A(t)$; измерить $B(\rho_0)$ и ток $\mathbf J(\rho_0)$.  
-5. Проверить численно условие $\nabla \cdot \mathbf B = 0$ во всём объёме.  
+4. Спроектировать эксперимент: тороид с фазовой модуляцией $A(t)$; измерить $B(
+ho_0)$ и ток $\mathbf J(
+ho_0)$.  
+5. Проверить численно условие $
+abla \cdot \mathbf B = 0$ во всём объёме.  
 
 ---
 
-*Документ отражает минимально необходимые математические исправления, выявленные аудитом (май 2025), и устраняет противоречие с уравнением Ампера–Максвелла.*
+*Документ отражает исправления, соответствующие римановой геометрии и уравнениям Максвелла. Утверждение о безтоковом $B$ удалено как ошибочное.*
