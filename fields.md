@@ -41,6 +41,8 @@ $$
 | Лапласиан $\nabla^2 \phi$ | $e^{-2\rho}[\partial_\rho(e^{2\rho} \partial_\rho \phi) + \partial_\alpha(e^{2\rho} \partial_\alpha \phi)] + \partial_\xi^2\phi$ |
 | Волновой оператор $\Box \phi$ | $-\partial_t^2 \phi + \nabla^2 \phi$  (сигнатура $(-,+,+)$) |
 
+<sub>При наличии продольной координаты $\xi$ в модели, в формуле Лапласиана и $\nabla^2$ появляется дополнительное слагаемое $+\partial_\xi^2 \phi$ без множителя $e^{-2\rho}$.</sub>
+
 ---
 
 ## III. Лагранжиан и уравнения движения
