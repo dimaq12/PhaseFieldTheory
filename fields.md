@@ -28,18 +28,18 @@ $$
 
 ## II. Поля и операторы
 
-**Основные переменные:**
+### Основные переменные:
 - **$\phi(\rho, \alpha, t)$** — скалярное поле  
 - **$\mathbf{A} = A_\rho d\rho + A_\alpha d\alpha$** — векторный потенциал (1-форма)
 
-**Дифференциальные операторы:**
+### Дифференциальные операторы:
 
 | Оператор                | Формула |
 |-------------------------|---------|
-| Градиент $\nabla \phi$         | $\frac{1}{e^\rho}(\partial_\rho \phi, \frac{1}{e^\rho}\partial_\alpha \phi)$ |
-| Дивергенция $\nabla \cdot \vec{F}$ | $\frac{1}{e^{2\rho}}(\partial_\rho F_\rho + \partial_\alpha F_\alpha)$ |
-| Ротор $\nabla \times \vec{F}$     | $\frac{1}{e^{2\rho}}(\partial_\rho F_\alpha - \partial_\alpha F_\rho)$ |
-| Лапласиан $\nabla^2 \phi$        | $\frac{1}{e^{2\rho}}\left[ \partial_\rho(e^{2\rho} \partial_\rho \phi) + \partial^2_\alpha \phi \right]$ |
+| Градиент $\nabla \phi$         | $e^{-2\rho}(\partial_\rho \phi, \partial_\alpha \phi)$ |
+| Дивергенция $\nabla \cdot \vec{F}$ | $e^{-2\rho}[\partial_\rho(e^{2\rho} F_\rho) + \partial_\alpha(e^{2\rho} F_\alpha)]$ |
+| Ротор $\nabla \times \vec{F}$     | $e^{-2\rho}(\partial_\rho F_\alpha - \partial_\alpha F_\rho)$ |
+| Лапласиан $\nabla^2 \phi$        | $e^{-2\rho}[\partial_\rho(e^{2\rho} \partial_\rho \phi) + \partial_\alpha(e^{2\rho} \partial_\alpha \phi)]$ |
 | Волновой оператор $\Box \phi$     | $\partial_t^2 \phi - \nabla^2 \phi$ |
 
 ---
@@ -49,7 +49,7 @@ $$
 Скалярное поле:
 <div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
 $$
-\mathcal{L}_\phi = \frac{1}{2}(\partial_t \phi)^2 - \frac{1}{2e^{2\rho}}\left[(\partial_\rho \phi)^2 + (\partial_\alpha \phi)^2 \right]
+\mathcal{L}_\phi = \frac{1}{2}(\partial_t \phi)^2 - \frac{1}{2e^{2\rho}}((\partial_\rho \phi)^2 + (\partial_\alpha \phi)^2)
 $$
 </div>
 
@@ -93,7 +93,7 @@ $$
 \nabla \times \vec{E} = -\partial_t \vec{B}
 $$
 </div>
-✅ Подтверждено численно в лог-пространстве для волнового случая.
+✅ Подтверждено численно в лог-пространстве.
 
 ---
 
@@ -102,7 +102,7 @@ $$
 Плотность энергии:
 <div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
 $$
-\mathcal{U} = \frac{1}{2}(\partial_t \mathcal{A})^2 + \frac{1}{2e^{2\rho}}\left[(\partial_\rho \mathcal{A})^2 + (\partial_\alpha \mathcal{A})^2\right]
+\mathcal{U} = \frac{1}{2}(\partial_t \mathcal{A})^2 + \frac{1}{2e^{2\rho}}((\partial_\rho \mathcal{A})^2 + (\partial_\alpha \mathcal{A})^2)
 $$
 </div>
 
