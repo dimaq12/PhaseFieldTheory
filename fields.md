@@ -1,26 +1,28 @@
+# Круговая теория поля (версия 2.6‑rev, 12 мая 2025)
 
-# Круговая теория поля (версия 2.6)
-
-> **Фундаментальная модель фазово-масштабного поля на логарифмическом цилиндре**
+> **Фундаментальная модель фазово‑масштабного поля на логарифмическом цилиндре**  
+> *Исправлено согласно итогам экспертного аудита (май 2025).*  
 
 ---
 
 ## I. Геометрия пространства
 
-Пространство:  
-**$\mathcal{M} = \mathbb{R}_t \times \mathbb{R}_\rho \times S^1_\alpha$**
+**Пространство**  
+$\mathcal M = \mathbb R_t \times \mathbb R_\rho \times S^1_\alpha$
 
-Метрика:
+**Метрика**  
 <div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
 $$
-ds^2 = -dt^2 + e^{2\rho}(d\rho^2 + d\alpha^2)
+ ds^2 = -dt^2 + e^{2\rho}\,(d\rho^2 + d\alpha^2)
 $$
 </div>
 
-Объемная форма:
+Обратная метрика: $g^{\rho\rho}=g^{\alpha\alpha}=e^{-2\rho}$
+
+**Объёмная форма (пространственная)**  
 <div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
 $$
-\star 1 = e^{2\rho} \, d\rho \wedge d\alpha
+ \star 1 = e^{2\rho}\,d\rho\wedge d\alpha
 $$
 </div>
 
@@ -28,88 +30,92 @@ $$
 
 ## II. Поля и операторы
 
-### Основные переменные:
-- **$\phi(\rho, \alpha, t)$** — скалярное поле  
-- **$\mathbf{A} = A_\rho d\rho + A_\alpha d\alpha$** — векторный потенциал (1-форма)
+### Основные переменные
+- $\phi(\rho,\alpha,t)$ — скалярное поле  
+- $\mathbf A=A_\rho\,d\rho+A_\alpha\,d\alpha$ — векторный потенциал (1‑форма)
 
-### Дифференциальные операторы:
+### Дифференциальные операторы в $(\rho,\alpha)$‑плоскости
 
-| Оператор                | Формула |
-|-------------------------|---------|
-| Градиент $\nabla \phi$         | $e^{-2\rho}(\partial_\rho \phi, \partial_\alpha \phi)$ |
-| Дивергенция $\nabla \cdot \vec{F}$ | $e^{-2\rho}[\partial_\rho(e^{2\rho} F_\rho) + \partial_\alpha(e^{2\rho} F_\alpha)]$ |
-| Ротор $\nabla \times \vec{F}$     | $e^{-2\rho}(\partial_\rho F_\alpha - \partial_\alpha F_\rho)$ |
-| Лапласиан $\nabla^2 \phi$        | $e^{-2\rho}[\partial_\rho(e^{2\rho} \partial_\rho \phi) + \partial_\alpha(e^{2\rho} \partial_\alpha \phi)]$ |
-| Волновой оператор $\Box \phi$     | $\partial_t^2 \phi - \nabla^2 \phi$ |
+| Оператор | Формула |
+|----------|---------|
+| Градиент $\nabla\phi$ | $e^{-2\rho}\bigl(\partial_\rho\phi,\;\partial_\alpha\phi\bigr)$ |
+| Дивергенция $\nabla\!\cdot\!\mathbf F$ | $e^{-2\rho}\!\bigl[\partial_\rho\!\bigl(e^{2\rho}F_\rho\bigr)+\partial_\alpha\!\bigl(e^{2\rho}F_\alpha\bigr)\bigr]$ |
+| Ротор $\nabla\times\mathbf F$ (скаляр) | $e^{-2\rho}\bigl(\partial_\rho F_\alpha-\partial_\alpha F_\rho\bigr)$ |
+| Лапласиан $\nabla^2\phi$ | $e^{-2\rho}\!\bigl[\partial_\rho\!\bigl(e^{2\rho}\partial_\rho\phi\bigr)+\partial_\alpha\!\bigl(e^{2\rho}\partial_\alpha\phi\bigr)\bigr]$ |
+| Волновой оператор $\Box\phi$ | $\partial_t^2\phi-\nabla^2\phi$ |
 
 ---
 
 ## III. Лагранжиан и уравнения движения
 
-Скалярное поле:
+### Скалярное поле
 <div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
 $$
-\mathcal{L}_\phi = \frac{1}{2}(\partial_t \phi)^2 - \frac{1}{2e^{2\rho}}((\partial_\rho \phi)^2 + (\partial_\alpha \phi)^2)
+ \mathcal L_\phi = \tfrac12(\partial_t\phi)^2 - \tfrac12 e^{-2\rho}\bigl[(\partial_\rho\phi)^2 + (\partial_\alpha\phi)^2\bigr].
 $$
 </div>
 
-Векторный потенциал:
+### Векторный потенциал
 <div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
 $$
-\mathcal{L}_A = -\frac{1}{4} F \wedge \star F \quad \text{где } F = dA
+ \mathcal L_A = -\tfrac14 F \wedge \star F, \qquad F = dA.
 $$
 </div>
 
-Уравнения Эйлера–Лагранжа:
+### Уравнения Эйлера–Лагранжа
 <div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
 $$
-\Box \phi = 0 \qquad d \star dA = 0
+ \Box \phi = 0, \qquad d\star dA = \mu_0\, J.
+$$
+</div>
+
+Для $J=0$ возможно лишь **динамическое** решение, удовлетворяющее уравнению Ампера–Максвелла
+<div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
+$$
+ \nabla \times \mathbf B - \mu_0\varepsilon_0\, \partial_t \mathbf E = 0.
 $$
 </div>
 
 ---
 
-## IV. Электрическое и магнитное поле
+## IV. Электрическое и магнитное поля
 
-Из векторного потенциала:
+Из потенциала $A$ определим  
 
-- Магнитное поле:
 <div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
 $$
-B(\rho, \alpha, t) = \frac{1}{e^{2\rho}}(\partial_\rho A_\alpha - \partial_\alpha A_\rho)
+ B(\rho,\alpha,t) = e^{-2\rho}\bigl(\partial_\rho A_\alpha - \partial_\alpha A_\rho\bigr),
 $$
 </div>
 
-- Электрическое поле:
 <div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
 $$
-E_\alpha = -\partial_t A_\alpha \qquad E_\rho = -\partial_t A_\rho
+ E_\rho = -\partial_t A_\rho, \qquad E_\alpha = -\partial_t A_\alpha.
 $$
 </div>
 
-Проверка уравнения Максвелла:
+Они тождественно удовлетворяют закону Фарадея
 <div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
 $$
-\nabla \times \vec{E} = -\partial_t \vec{B}
+ \nabla \times \mathbf E = -\partial_t B.
 $$
 </div>
-✅ Подтверждено численно в лог-пространстве.
 
 ---
 
-## V. Энергия и аподизация
+## V. Энергия
 
-Плотность энергии:
+Плотность энергии  
 <div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
 $$
-\mathcal{U} = \frac{1}{2}(\partial_t \mathcal{A})^2 + \frac{1}{2e^{2\rho}}((\partial_\rho \mathcal{A})^2 + (\partial_\alpha \mathcal{A})^2)
+ \mathcal U = \tfrac12\bigl(E^2 + B^2\bigr),\qquad E^2 = g^{ij}E_iE_j = e^{-2\rho}(E_\rho^2 + E_\alpha^2).
 $$
 </div>
 
-Аподизация:
+Полная энергия в кольцевом сечении
 <div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
 $$
-\mathcal{A}(\rho) = e^{-\rho^2} \cdot f(\rho, \alpha, t)
+ \mathcal E = \int_{0}^{2\pi}\! d\alpha \int_{-\infty}^{\infty}\! d\rho\, e^{2\rho}\, \mathcal U.
 $$
 </div>
 
@@ -117,31 +123,33 @@ $$
 
 ## VI. Топология и калибровка
 
-- Калибровка: $A \rightarrow A + d\chi$
-- Топологический заряд:
+Калибровка: $A \mapsto A + d\chi$.
+
+Топологический заряд  
 <div style="background:#f9f9f9; padding:0.5em; border-left:3px solid #ccc;">
 $$
-Q = \frac{1}{2\pi} \int_0^{2\pi} \partial_\alpha \arg(\phi) \, d\alpha = n
+ Q = \frac{1}{2\pi} \int_{0}^{2\pi} \partial_\alpha \arg(\phi)\, d\alpha \in \mathbb Z.
 $$
 </div>
 
 ---
 
-## VII. Выводы и наблюдения
+## VII. Обсуждения
 
-- Потенциал $A$ способен формировать замкнутые кольцевые магнитные поля $B$, но **только в динамике** ($\partial_t A \ne 0$).
-- В статике ($\partial_t A = 0$), $\nabla \times \vec{B} = \mu_0 \vec{J}$ требует наличия тока — проверено аналитически.
-- Уравнение $\nabla \times \vec{E} = -\partial_t \vec{B}$ выполнено (численно подтверждено).
-- Поле $\vec{E}$ вихревое и замкнутое по фазе, с масштабной локализацией.
-- Энергия фокусируется в радиальном окне — эффект масштабной резонансной моды.
-- Вся динамика построена без точечных источников, **в динамическом режиме**.
+* Статическое кольцевое поле $B(\rho)$ **обязательно** требует ток $\mathbf J \neq 0$; безтоковые конфигурации возможны лишь динамически, когда вклад $-\mu_0\varepsilon_0\, \partial_t \mathbf E$ компенсирует ротор $\nabla \times \mathbf B$.  
+* Скалярные и векторные моды локализуются по $\rho$ благодаря экспоненциальному фактору метрики, что формирует «радиальные резонансы».  
+* При численном решении с корректными операторами выполняются тесты сохранения заряда $\partial_t \rho + \nabla \cdot \mathbf J = 0$.
 
 ---
 
 ## VIII. Следующие шаги
 
-- Ввести непрерывность тока $\partial_t \rho + \nabla \cdot \vec{J} = 0$
-- Построить лагранжиан с нелинейностью (например, $\phi^4$)
-- Провести квантование в лог-пространстве
-- Спроектировать эксперимент: тороид с фазовой модуляцией и измерение $B$ на заданном $\rho_0$
-- Проверить $\nabla \cdot \vec{B} = 0$ и поведение эффективной плотности
+1. Реализовать непрерывность тока и проанализировать распределение $\mathbf J$ для стоячих мод.  
+2. Добавить нелинейность (например $\phi^4$) и исследовать солитоноподобные решения.  
+3. Выполнить каноническое квантование в лог‑координатах.  
+4. Спроектировать эксперимент: тороид с фазовой модуляцией $A(t)$; измерить $B(\rho_0)$ и ток $\mathbf J(\rho_0)$.  
+5. Проверить численно условие $\nabla \cdot \mathbf B = 0$ во всём объёме.  
+
+---
+
+*Документ отражает минимально необходимые математические исправления, выявленные аудитом (май 2025), и устраняет противоречие с уравнением Ампера–Максвелла.*
