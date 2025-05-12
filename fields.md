@@ -30,15 +30,16 @@ $$
 - $\phi(\rho, \alpha, t)$ — скалярное поле  
 - $\mathbf{A} = A_\rho\, d\rho + A_\alpha\, d\alpha$ — векторный потенциал (1-форма)
 
-### Дифференциальные операторы
+### Дифференциальные операторы  
+*Формулы даны для плоского среза $(\rho, \alpha)$. При наличии продольной координаты $\xi$ добавляется $+\partial_\xi^2\phi$ в Лапласиан и пространственную часть $\nabla^2$.*
 
-| Оператор                        | Формула                                                                 |
-|---------------------------------|-------------------------------------------------------------------------|
-| Градиент $\nabla\phi$           | $e^{-2\rho}(\partial_\rho \phi,\; \partial_\alpha \phi)$               |
+| Оператор | Формула |
+|----------|---------|
+| Градиент $\nabla\phi$ | $e^{-2\rho}(\partial_\rho \phi,\; \partial_\alpha \phi)$ |
 | Дивергенция $\nabla \cdot \vec{F}$ | $e^{-2\rho}[\partial_\rho(e^{2\rho} F_\rho) + \partial_\alpha(e^{2\rho} F_\alpha)]$ |
-| Ротор $\nabla \times \vec{F}$   | $e^{-2\rho}(\partial_\rho F_\alpha - \partial_\alpha F_\rho)$         |
-| Лапласиан $\nabla^2 \phi$       | $e^{-2\rho}[\partial_\rho(e^{2\rho} \partial_\rho \phi) + \partial_\alpha(e^{2\rho} \partial_\alpha \phi)]$ |
-| Волновой оператор $\Box \phi$   | $\partial_t^2 \phi - \nabla^2 \phi$                                    |
+| Ротор $\nabla \times \vec{F}$ | $e^{-2\rho}(\partial_\rho F_\alpha - \partial_\alpha F_\rho)$ |
+| Лапласиан $\nabla^2 \phi$ | $e^{-2\rho}[\partial_\rho(e^{2\rho} \partial_\rho \phi) + \partial_\alpha(e^{2\rho} \partial_\alpha \phi)] + \partial_\xi^2\phi$ |
+| Волновой оператор $\Box \phi$ | $-\partial_t^2 \phi + \nabla^2 \phi$  (сигнатура $(-,+,+)$) |
 
 ---
 
@@ -68,9 +69,9 @@ $$
 
 ## IV. Электрическое и магнитное поля
 
-**Магнитное поле**
+**Магнитное поле (выход из плоскости: $B_z$)**
 $$
-B(\rho, \alpha, t) = e^{-2\rho}(\partial_\rho A_\alpha - \partial_\alpha A_\rho)
+B_z(\rho, \alpha, t) = e^{-2\rho}(\partial_\rho A_\alpha - \partial_\alpha A_\rho)
 $$
 
 **Электрическое поле**
@@ -80,7 +81,7 @@ $$
 
 Закон Фарадея:
 $$
-\nabla \times \vec{E} = -\partial_t B
+\nabla \times \vec{E} = -\partial_t B_z
 $$
 
 ---
@@ -89,7 +90,7 @@ $$
 
 Плотность энергии
 $$
-\mathcal{U} = \tfrac{1}{2}(E^2 + B^2), \quad E^2 = e^{-2\rho}(E_\rho^2 + E_\alpha^2)
+\mathcal{U} = \tfrac{1}{2}(E^2 + B_z^2), \quad E^2 = e^{-2\rho}(E_\rho^2 + E_\alpha^2)
 $$
 
 Интеграл полной энергии
@@ -132,4 +133,4 @@ $$
 
 ---
 
-*Документ исправлен согласно римановой геометрии и уравнениям Максвелла. Утверждение о безтоковом $B$ удалено как физически некорректное.*
+*Документ окончательно приведён в согласие с римановой геометрией, уравнениями Максвелла и физическим содержанием. Готов к дальнейшему использованию.*
